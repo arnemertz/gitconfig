@@ -71,7 +71,7 @@
 
 # all files with conflicts
 
-    conflicts = diff --name-only --diff-filter=U
+    conflicts = diff --name-only --relative --diff-filter=U
 
 # Logic:
 #
