@@ -33,6 +33,10 @@
 
     unpublish = "!git push origin :$(git branch-name)"
 
+# push a rebased branch
+
+    pushf = push --force-with-lease
+
 # pull the given branch without checking it out (ff-only)
 
     sync = "!git fetch origin $1:$1"
