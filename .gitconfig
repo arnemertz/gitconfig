@@ -24,6 +24,14 @@
 
     branch-name = "!git rev-parse --abbrev-ref HEAD"
 
+# get upstream branch
+
+    upstream = "!git for-each-ref --format='%(upstream:short)' $(git symbolic-ref -q HEAD)"
+
+# ff-merge the current branch from fetched origin
+
+    ff = "!git merge --ff-only $(git upstream)"
+
 # Push the current branch to the remote "origin", and set it to track
 # the upstream branch
 
