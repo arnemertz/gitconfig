@@ -117,11 +117,11 @@ fixws = !"\
     git reset --soft HEAD~ ; \
   fi"
 
-# Delete any branches that have been merged into master
+# Delete any branches that have been merged into develop
 # See also: https://gist.github.com/robmiller/5133264
 
     delete-merged-branches = "!\
-        git fetch && git checkout develop && git branch --merged | grep -v '\\*' | grep -v master  | grep -v vendor | xargs -n 1 git branch -d"
+        git fetch -p && git branch --merged develop | grep -v '\\*' | grep -v master | xargs -r -n 1 git branch -d"
 
 [status]
 	short = true
