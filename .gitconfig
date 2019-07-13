@@ -2,6 +2,9 @@
 	email = arnemertz@github.com
 	name = Arne Mertz
 
+[core]
+	editor = vim
+
 [alias]
 #logs
     lg = !"git lg1"
