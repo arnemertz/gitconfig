@@ -4,6 +4,7 @@
 
 [core]
 	editor = vim
+    excludesfile = .gitignore
 
 [alias]
 #logs
@@ -18,7 +19,7 @@
 
     first = "!f() { git log --follow --abbrev-commit --format=format:'%h - (%ar) %s - %an %d' $1 | tail -1; echo \n }; f"
 
-    mine = !"git log --pretty='format:%h%x09%an%x09%ad%x09%s'"
+    mine = !"git log --pretty='format:%h%x09%an%x09%ad%x09%s' --author=\"$(git config --get user.name)\""
 
 #
 # Working with branches
@@ -135,4 +136,4 @@ fixws = !"\
 	branch = true
 
 [rebase]
-    abbreviateCommands = true
+	abbreviateCommands = true
