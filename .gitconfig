@@ -1,10 +1,13 @@
 [user]
-	email = arnemertz@github.com
-	name = Arne Mertz
+    email = arnemertz@github.com
+    name = Arne Mertz
 
 [core]
-	editor = vim
+    editor = vim
     excludesfile = ~/gitconfig/.gitignore
+
+[commit]
+    template = ~/gitconfig/commit.template
 
 [alias]
 #logs
@@ -132,8 +135,8 @@ fixws = !"\
         git fetch -p && git branch --merged develop | grep -v '\\*' | grep -v master | xargs -r -n 1 git branch -d"
 
 [status]
-	short = true
-	branch = true
+    short = true
+    branch = true
 
 [rebase]
-	abbreviateCommands = true
+    abbreviateCommands = true
