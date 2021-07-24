@@ -140,3 +140,6 @@ fixws = !"\
 
 [rebase]
     abbreviateCommands = true
+
+[init]
+    defaultBranch = main
