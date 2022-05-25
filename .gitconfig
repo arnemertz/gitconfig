@@ -96,6 +96,7 @@
 
     conflicts = diff --name-only --relative --diff-filter=U
 
+    dt = difftool --dir-diff
 # Logic:
 #
 # The 'git stash save' fails if the tree is clean (instead of
