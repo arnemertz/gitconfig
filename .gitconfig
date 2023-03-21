@@ -6,9 +6,6 @@
     editor = vim
     excludesfile = ~/gitconfig/.gitignore
 
-[commit]
-    template = ~/gitconfig/commit.template
-
 [alias]
 #logs
     lg = !"git lg1"
