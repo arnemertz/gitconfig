@@ -21,3 +21,6 @@ __pycache__
 *.pch
 */Debug/*.log
 *.vcxproj.*
+
+# QtCreator
+CMakeLists.txt.user

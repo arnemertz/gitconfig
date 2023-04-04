@@ -77,6 +77,13 @@
 # Interactively rebase all the commits on the current branch
 #rebase-branch = "!git rebase -i `git merge-base master HEAD`"
 
+# Grep for branches
+    bl = branch --list
+    blx = "!f() { pat=$1; shift; git bl *${pat}* | xargs $@; }; f"
+    bld = "!f() { git blx $1 git branch -d; }; f"
+    bldf = "!f() { git blx $1 git branch -d -f; }; f"
+    bls = "!f() { git blx $1 git switch; }; f"
+
 #
 # Working with files
 #
