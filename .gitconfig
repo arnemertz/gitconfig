@@ -78,7 +78,7 @@
 #rebase-branch = "!git rebase -i `git merge-base master HEAD`"
 
 # Grep for branches
-    bl = "!f() { pat=$1; shift; if [ -z \"${pat}\" ]; then git branch --list; else git branch --list *${pat}*; fi; }; f"
+    bl = "!f() { if [ -z \"$1\" ]; then git branch --list; else git branch --list '*'$1'*'; fi; }; f"
     blx = "!f() { pat=$1; shift; git bl ${pat} | xargs $@; }; f"
     bld = "!f() { git blx $1 git branch -d; }; f"
     bldf = "!f() { git blx $1 git branch -d -f; }; f"
