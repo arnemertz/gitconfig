@@ -6,6 +6,19 @@
     editor = vim
     excludesfile = ~/gitconfig/.gitignore
 
+[status]
+    short = true
+    branch = true
+
+[rebase]
+    abbreviateCommands = true
+
+[init]
+    defaultBranch = main
+
+[fetch]
+    prune = true
+
 [alias]
 #logs
     lg = !"git lg1"
@@ -136,15 +149,5 @@ fixws = !"\
 # Delete any branches that have been merged into develop
 # See also: https://gist.github.com/robmiller/5133264
 
-    delete-merged-branches = "!\
-        git fetch -p && git branch --merged develop | grep -v '\\*' | grep -v master | xargs -r -n 1 git branch -d"
-
-[status]
-    short = true
-    branch = true
-
-[rebase]
-    abbreviateCommands = true
-
-[init]
-    defaultBranch = main
+delete-merged-branches = "!\
+    git fetch && git branch --merged develop | grep -v '\\*' | grep -v master | xargs -r -n 1 git branch -d"
