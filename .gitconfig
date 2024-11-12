@@ -96,6 +96,9 @@
     bld = "!f() { git blx $1 git branch -d; }; f"
     bldf = "!f() { git blx $1 git branch -d -f; }; f"
     bls = "!f() { git blx $1 git switch; }; f"
+    blr = "!f() { if [ -z \"$1\" ]; then git branch --list --remote; else git branch --list --remote '*'$1'*'; fi; }; f"
+    blrx = "!f() { pat=$1; shift; git blr ${pat} | xargs $@; }; f"
+    blrs = "!f() { pat=$1; shift; git blr ${pat} | sed s#origin/## | xargs git switch; }; f"
 
 #
 # Working with files
